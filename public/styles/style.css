@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    min-height: 100vh;
+}
+
+.divs {
+    padding: 5px;
+    margin: 5px;
+}
