@@ -70,7 +70,7 @@ function convert() {
 
     calculate(fromCurr, toCurr, userPrice).then((res) => {
         let price = Math.round(res * 100) / 100
-        document.getElementById('convertedPrice').innerHTML = "converted price: " + price + ' ' +toCurr
+        document.getElementById('convertedPrice').innerHTML = "Converted price: " + price + ' ' +toCurr
     })
 }
 
