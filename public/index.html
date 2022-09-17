@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,26 +9,31 @@
     <script src="app.js" async></script>
     <title>Currency Converter</title>
 </head>
+
 <body>
     <div class="main">
-            <div class="input divs">
-                <label for="userPrice">Amount</label>
-                <input type="number" name="userPrice" id="userPrice">
-            </div>
-            <div class="fromMenu divs" id="menu1">
-                <label for="">From</label>
-                <select name="currencies" id="currencies1"></select>
-            </div>
-            <div class="toMenu divs" id="menu2">
-                <label for="">To</label>
-                <select name="currencies" id="currencies2"></select>
-            </div>
-            <div class="convertButton divs">
-                <button class="convertBtn">Convert</button>
-            </div>
-            <div class="converted divs">
-                <p id="convertedPrice"></p>
-            </div>
+        <div class="headerText divs">
+            <h2>Currency Converter</h2>
+        </div>
+        <div class="input divs">
+            <label for="userPrice">Amount</label>
+            <input type="number" name="userPrice" id="userPrice">
+        </div>
+        <div class="fromMenu divs" id="menu1">
+            <label for="">From</label>
+            <select name="currencies" id="currencies1"></select>
+        </div>
+        <div class="toMenu divs" id="menu2">
+            <label for="">To</label>
+            <select name="currencies" id="currencies2"></select>
+        </div>
+        <div class="convertButton divs">
+            <button class="convertBtn">Convert</button>
+        </div>
+        <div class="converted divs">
+            <p id="convertedPrice"></p>
+        </div>
     </div>
 </body>
+
 </html>
