@@ -11,9 +11,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* text-align: center; */
     min-height: 100vh;
     background-color: rgb(50, 50, 99);
+    color: white;
 }
 
 .divs {
@@ -23,22 +23,71 @@ body {
 }
 
 .main {
-    background-color: white;
-    border-radius: 10px;
-}
-
-p {
-    font-weight: 400;
-}
-
-.convertButton {
-    text-align: center;
-}
-
-.converted {
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: rgb(171, 135, 92);
+    border: none;
+    border-radius: 1em;
 }
 
 .headerText {
     text-align: center;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    margin-top: 1em;
+}
+
+.headerText > h2 {
+    font-size: 2rem;
+    
+}
+
+.input {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.fromMenu {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    margin-left: 2em;
+}
+
+
+.toMenu {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    margin-left: 10em;
+}
+
+.input > *,
+.fromMenu > *,
+.toMenu > * {
+    margin-top: 0.8em;
+}
+
+.convertButtonDiv {
+    text-align: center;
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.convertBtn {
+    width: 80%;
+    padding: 1em;
+    border: none;
+    border-radius: 0.8em;
+    color: white;
+    background-color: rgb(37, 101, 122);
+}
+
+.converted {
+    text-align: center;
+    grid-column-start: 2;
+    grid-row-start: 3
+}
+
+.converted > p {
+    font-weight: bold;
 }
