@@ -1,9 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500&display=swap');
+
+
+:root {
+    --colour1:#EEEEEE;
+    --colour2:#00ADB5;
+    --colour3:#393E46;
+    --colour4:#222831;
+}
 
 * {
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Open Sans';
+    font-family: 'Roboto Mono', monospace;
     font-size: 1.1rem;
 }
 
@@ -12,8 +20,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: rgb(50, 50, 99);
-    color: white;
+    background-color: var(--colour4);
+    color: var(--colour1);
 }
 
 .divs {
@@ -26,16 +34,16 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    background-color: rgb(171, 135, 92);
-    border: none;
-    border-radius: 1em;
+    background-color: var(--colour2);
+    border-radius: 1.5rem;
+    box-shadow: 0 0 0 4rem var(--colour3);
+    padding: 5rem;
 }
 
 .headerText {
     text-align: center;
     grid-column-start: 2;
     grid-row-start: 1;
-    margin-top: 1em;
 }
 
 .headerText > h2 {
@@ -46,6 +54,7 @@ body {
 .input {
     grid-column-start: 1;
     grid-row-start: 2;
+    margin-left: 1em;
 }
 
 .fromMenu {
@@ -54,21 +63,13 @@ body {
     margin-left: 2em;
 }
 
-
 .toMenu {
     grid-column-start: 2;
     grid-row-start: 2;
     margin-left: 10em;
 }
 
-.input > *,
-.fromMenu > *,
-.toMenu > * {
-    margin-top: 0.8em;
-}
-
 .convertButtonDiv {
-    text-align: center;
     grid-column-start: 3;
     grid-row-start: 2;
 }
@@ -78,16 +79,26 @@ body {
     padding: 1em;
     border: none;
     border-radius: 0.8em;
-    color: white;
-    background-color: rgb(37, 101, 122);
+    color: var(--colour1);
+    background-color: var(--colour4);
+}
+
+.input > *,
+.fromMenu > *,
+.toMenu > * {
+    display: flex;
+    text-align: center;
 }
 
 .converted {
-    text-align: center;
     grid-column-start: 2;
-    grid-row-start: 3
+    grid-row-start: 3;
+    display: flex;
+    align-items: center;
 }
 
-.converted > p {
-    font-weight: bold;
+#convertedPrice {
+    color: var(--colour4);
+    font-weight: 400;
+    font-size: 1.5rem;
 }
