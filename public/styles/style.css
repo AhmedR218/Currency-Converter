@@ -24,20 +24,14 @@ body {
     color: var(--colour1);
 }
 
-.divs {
-    padding: 5px;
-    margin: 5px;
-    font-weight: 300;
-}
-
 .main {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 20rem);
     grid-template-rows: repeat(3, 1fr);
     background-color: var(--colour2);
     border-radius: 1.5rem;
     box-shadow: 0 0 0 4rem var(--colour3);
-    padding: 5rem;
+    padding: 0.5rem;
 }
 
 .headerText {
@@ -48,25 +42,37 @@ body {
 
 .headerText > h2 {
     font-size: 2rem;
-    
 }
 
 .input {
     grid-column-start: 1;
     grid-row-start: 2;
-    margin-left: 1em;
+    margin-top: 2%;
+}
+
+#userPrice {
+    display: block;
+    margin : 0 auto;
 }
 
 .fromMenu {
     grid-column-start: 2;
     grid-row-start: 2;
-    margin-left: 2em;
+    margin: 0 10%;
+    margin-top: 2%;
 }
 
 .toMenu {
     grid-column-start: 2;
     grid-row-start: 2;
-    margin-left: 10em;
+    margin: 0 60%;
+    margin-top: 2%;
+}
+
+#currencies1,
+#currencies2 {
+    display: block;
+    width: 6rem;
 }
 
 .convertButtonDiv {
@@ -84,10 +90,11 @@ body {
 }
 
 .input > *,
-.fromMenu > *,
-.toMenu > * {
+.convertButtonDiv {
     display: flex;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .converted {
@@ -95,10 +102,47 @@ body {
     grid-row-start: 3;
     display: flex;
     align-items: center;
+    text-align: center;
 }
 
 #convertedPrice {
     color: var(--colour4);
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 1400px) {
+    .main {
+        grid-template-columns: repeat(3, 15rem);
+        box-shadow: 0 0 0 3rem var(--colour3);
+    }
+
+    #convertedPrice {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .main {
+        grid-template-columns: repeat(3, 12rem);
+        box-shadow: 0 0 0 2rem var(--colour3);
+    }
+
+    #convertedPrice {
+        font-size: 1.2rem;
+    }
+
+    #userPrice {
+        width: 80%;
+    }
+
+    #currencies1,
+    #currencies2 {
+        display: block;
+        width: 4rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    /* redo css for mobile */
 }
