@@ -47,7 +47,7 @@ body {
 .input {
     grid-column-start: 1;
     grid-row-start: 2;
-    margin-top: 2%;
+    margin-top: 5%;
 }
 
 #userPrice {
@@ -59,14 +59,14 @@ body {
     grid-column-start: 2;
     grid-row-start: 2;
     margin: 0 10%;
-    margin-top: 2%;
+    margin-top: 5%;
 }
 
 .toMenu {
     grid-column-start: 2;
     grid-row-start: 2;
     margin: 0 60%;
-    margin-top: 2%;
+    margin-top: 5%;
 }
 
 #currencies1,
@@ -106,7 +106,7 @@ body {
 }
 
 #convertedPrice {
-    color: var(--colour4);
+    color: var(--colour1);
     font-weight: 400;
     font-size: 2rem;
 }
@@ -144,5 +144,68 @@ body {
 }
 
 @media only screen and (max-width: 800px) {
-    /* redo css for mobile */
+    .main {
+        grid-template-columns: 5rem 20rem 5rem;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .input {
+        grid-column-start: 2;
+        grid-row-start: 2;
+    }
+
+    .fromMenu {
+        grid-column-start: 2;
+        grid-row-start: 3;
+    }
+
+    .toMenu {
+        grid-column-start: 2;
+        grid-row-start: 4;
+        margin: 0;
+    }
+
+    .fromMenu > *,
+    .toMenu> * {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    
+    #currencies1,
+    #currencies2 {
+        display: block;
+        width: 6rem;
+        margin : 0 auto;
+    }
+
+    .convertButtonDiv {
+        grid-column-start: 2;
+        grid-row-start: 5;
+    }
+
+    .converted {
+        grid-column-start: 2;
+        grid-row-start: 6;
+        justify-content: center;
+    }
+
+    #convertedPrice {
+        font-size: 1.75rem;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .main {
+        grid-template-columns: 1.5rem 10rem 1.5rem;
+        padding: 0.5rem;
+    }
+
+    #convertedPrice {
+        font-size: 1.3rem;
+    }
 }
